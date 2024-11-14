@@ -12,7 +12,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1be966c0-3566-469b-abf4-36c40a87bf71" name="Changes" comment="" />
+    <list default="true" id="1be966c0-3566-469b-abf4-36c40a87bf71" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XCore_Plugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XCore_Plugin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XCore_Plugin/XCore_Plugin.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XCore_Plugin/XCore_Plugin.Build.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +160,7 @@
       <workItem from="1731543106017" duration="585000" />
       <workItem from="1731544489732" duration="147000" />
       <workItem from="1731544651906" duration="984000" />
-      <workItem from="1731545912927" duration="318000" />
+      <workItem from="1731545912927" duration="968000" />
     </task>
     <servers />
   </component>
