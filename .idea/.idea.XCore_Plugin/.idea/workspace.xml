@@ -14,10 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1be966c0-3566-469b-abf4-36c40a87bf71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XCore_Plugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XCore_Plugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XCore_Plugin/XCore_PluginCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XCore_Plugin/XCore_PluginCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XCore_Plugin/XCore_PluginCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XCore_Plugin/XCore_PluginCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +161,8 @@
       <workItem from="1731544651906" duration="984000" />
       <workItem from="1731545912927" duration="968000" />
       <workItem from="1731547083190" duration="1022000" />
-      <workItem from="1731548872008" duration="5063000" />
+      <workItem from="1731548872008" duration="6487000" />
+      <workItem from="1731622689945" duration="1115000" />
     </task>
     <servers />
   </component>
