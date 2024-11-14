@@ -7,6 +7,7 @@
 #include "Logging/LogMacros.h"
 #include "XCore_PluginCharacter.generated.h"
 
+class IOnlineSession;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
@@ -69,5 +70,11 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	
+public:
+
+	// Pointer to online session interface
+	TWeakPtr<::IOnlineSession> OnlineSessionInterface;
+	
 };
 

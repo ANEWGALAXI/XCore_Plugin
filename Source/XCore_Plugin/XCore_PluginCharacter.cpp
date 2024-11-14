@@ -10,6 +10,9 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "OnlineSubsystem.h"
+#include "OnlineSubsystemUtils.h"
+#include "Interfaces/OnlineSessionInterface.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -52,6 +55,26 @@ AXCore_PluginCharacter::AXCore_PluginCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+
+	// Get an instance of the online subsystem.
+	if (IOnlineSubsystem* OnlineSubsystem = Online::GetSubsystem(GetWorld()); OnlineSubsystem != nullptr)
+	{
+
+		// Store a reference to the session interface.
+		OnlineSessionInterface = OnlineSubsystem->GetSessionInterface();
+
+		if (GEngine)
+		{
+
+			// Print a debug message to the screen.
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Green,
+				FString::Printf(TEXT("Found online subsystem: %s"),
+					*OnlineSubsystem->GetSubsystemName().ToString()));
+			
+		}
+			
+	}
+	
 }
 
 void AXCore_PluginCharacter::BeginPlay()
