@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Interfaces/OnlineSessionDelegates.h"
 #include "Logging/LogMacros.h"
+#include "Interfaces/OnlineSessionInterface.h"
 #include "XCore_PluginCharacter.generated.h"
 
 class IOnlineSession;
@@ -74,7 +76,29 @@ public:
 public:
 
 	// Pointer to online session interface
-	TWeakPtr<::IOnlineSession> OnlineSessionInterface;
+	IOnlineSessionPtr OnlineSessionInterface;
+	
+protected:
+
+	UFUNCTION(BlueprintCallable, Category = OnlineSessions)
+    void CreateGameSession();
+
+	void OnCreateGameSessionComplete(FName SessionName, bool bWasSuccessful);
+
+	UFUNCTION(BlueprintCallable, Category = OnlineSessions)
+	void JoinGameSession();
+
+	void OnFindSessionsComplete(bool bWasSuccessful);
+
+	void OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Result);
+
+private:
+
+	FOnCreateSessionCompleteDelegate OnCreateSessionCompleteDelegate;
+	FOnFindSessionsCompleteDelegate	 OnFindSessionsCompleteDelegate;
+	FOnJoinSessionCompleteDelegate	 OnJoinSessionCompleteDelegate;
+
+	TSharedPtr<FOnlineSessionSearch> SessionSearch;
 	
 };
 
