@@ -47,6 +47,12 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void SetMatchType(const FString& Type);
 
+	//
+	//	Callbacks for the custom delegates in the 'XCoreSubsystem'.
+	//
+	UFUNCTION()
+	void OnCreateSession(bool bWasSuccessful);
+
 private:
 
 	UFUNCTION()

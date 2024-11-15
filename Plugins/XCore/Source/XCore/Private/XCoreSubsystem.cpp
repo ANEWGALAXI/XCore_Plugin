@@ -57,17 +57,19 @@ void UXCoreSubsystem::CreateSession(const int32 NumPublicConnections, const FStr
 	SessionSettings->Set(FName("MatchType"), MatchType, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
 
 	// Create the session for the hosting player, with the specified settings.
-	if (!SessionInterface->CreateSession(*HostingPlayer->GetPreferredUniqueNetId(), NAME_GameSession, *SessionSettings))
-
-		// If we fail to create a session, clear our delegate handle.
-		SessionInterface->ClearOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegateHandle);
+	SessionInterface->CreateSession(*HostingPlayer->GetPreferredUniqueNetId(), NAME_GameSession, *SessionSettings);
 	
 }
 
 void UXCoreSubsystem::OnCreateSessionComplete(FName SessionName, bool bWasSuccessful)
 {
 
-	
+	if (SessionInterface)
+		// Clear our delegate handle since we have successfully gotten to this function.
+		SessionInterface->ClearOnCreateSessionCompleteDelegate_Handle(OnCreateSessionCompleteDelegateHandle);
+
+	// Broadcast our delegate since we are finished creating a session.
+	XCoreOnCreateSessionCompleteDelegate.Broadcast(bWasSuccessful);
 	
 }
 

@@ -8,6 +8,12 @@
 
 #include "XCoreSubsystem.generated.h"
 
+//
+//	Declaring our own custom delegates for the 'XCoreMenu' class to bind callbacks to.
+//
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FXCoreOnCreateSessionCompleteDelegate, bool, bWasSuccessful);
+
+
 /**
  * 
  */
@@ -29,6 +35,11 @@ public:
 	void DestroySession();
 	void StartSession();
 
+	//
+	//	Our own custom delegates for the 'XCoreMenu' class to bind callbacks to.
+	//
+	FXCoreOnCreateSessionCompleteDelegate XCoreOnCreateSessionCompleteDelegate;
+	
 protected:
 
 	//

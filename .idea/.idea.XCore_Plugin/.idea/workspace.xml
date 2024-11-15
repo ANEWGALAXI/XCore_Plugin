@@ -14,8 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1be966c0-3566-469b-abf4-36c40a87bf71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XCore_Plugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XCore_Plugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/XCore_Plugin/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/XCore_Plugin/Maps/DefaultMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/XCore/Content/WBP_XCoreMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/XCore/Content/WBP_XCoreMenu.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/XCore/Source/XCore/Private/XCoreMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/XCore/Source/XCore/Private/XCoreMenu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/XCore/Source/XCore/Private/XCoreSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/XCore/Source/XCore/Private/XCoreSubsystem.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/XCore/Source/XCore/Public/XCoreMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/XCore/Source/XCore/Public/XCoreMenu.h" afterDir="false" />
@@ -171,7 +169,7 @@
       <workItem from="1731548872008" duration="6487000" />
       <workItem from="1731622689945" duration="5571000" />
       <workItem from="1731631910557" duration="3505000" />
-      <workItem from="1731636597854" duration="3280000" />
+      <workItem from="1731636597854" duration="5882000" />
     </task>
     <servers />
   </component>

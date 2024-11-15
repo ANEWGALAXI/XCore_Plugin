@@ -33,10 +33,15 @@ void UXCoreMenu::MenuSetup()
 		
 	}
 
+	// Get and validate a reference of the game instance.
 	if (const UGameInstance* GameInstance = GetGameInstance())
 	{
 
+		// Retrieve a reference to our custom subsystem from the game instance.
 		XCoreSubsystem = GameInstance->GetSubsystem<UXCoreSubsystem>();
+		if (XCoreSubsystem)
+			// Bind our callback to the respective delegate so that 'OnCreateSession' gets called after a session is created.
+			XCoreSubsystem->XCoreOnCreateSessionCompleteDelegate.AddDynamic(this, &ThisClass::OnCreateSession);
 		
 	}
 	
@@ -75,10 +80,32 @@ void UXCoreMenu::HostButtonClicked()
 	{
 		
 		XCoreSubsystem->CreateSession(NumPublicConnections, MatchType);
+		
+	}
+	
+}
+
+void UXCoreMenu::OnCreateSession(bool bWasSuccessful)
+{
+
+	if (bWasSuccessful)
+	{
+		
+		if (GEngine)
+
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Green, "Session created successfully.");
 
 		if (UWorld* World = GetWorld())
 
 			World->ServerTravel("/Game/XCore_Plugin/Maps/LobbyMap?listen");
+		
+	}
+	else
+	{
+
+		if (GEngine)
+
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, "Session creation failed!");
 		
 	}
 	
